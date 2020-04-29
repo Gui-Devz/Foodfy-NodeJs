@@ -15,4 +15,14 @@ routes.get("/recipes", (req, res) => {
     return res.render("recipes", { recipes: data });
 });
 
+routes.get("/recipe", (req, res) => {
+    const id = req.query.id;
+
+    const recipe = data.find((recipe) => {
+        return recipe.id == id;
+    });
+
+    return res.render("recipe", { recipe });
+});
+
 module.exports = routes;

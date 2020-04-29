@@ -7,3 +7,5 @@ img/*
 .prettierrc
 
 .editorconfig
+
+assets/test.js

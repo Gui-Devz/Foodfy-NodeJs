@@ -72,7 +72,8 @@ module.exports = [
             "Em uma frigideira ou assador coloque o óleo quando estiver quente frite até ficarem douradas.",
             "Para servir fica bonito com salada, ou abuse da criatividade.",
         ],
-        information: "",
+        information:
+            "Uma dica é comer o quanto antes, pois frango frito requentado não recomendo rsrs.",
     },
     {
         id: "d",
@@ -145,6 +146,7 @@ module.exports = [
             "Despeje em assadeira retangular média, untada e leve ao forno médio (180°C), por aproximadamente 45 minutos. Depois de frio, polvilhe, com o",
             "açúcar de confeiteiro e corte em quadrados.",
         ],
-        information: "",
+        information:
+            "Preste bastante atenção na hora de configurar o seu forno, pois um só erro pode ser fatal",
     },
 ];

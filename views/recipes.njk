@@ -5,7 +5,7 @@
         <div class="cards">
         {% for recipe in recipes %}
 
-            <div class="card" id="burger">
+            <div class="card" id="{{recipe.id}}">
                 <img src="{{recipe.image}}" alt="imagem de {{recipe.title}}">
                 <h2>{{recipe.title}}</h2>
                 <span><p>por {{recipe.author}}</p></span>
@@ -26,3 +26,7 @@
     </div>
 
 {% endblock content %}
+
+{% block scripts %}
+    <script src="/recipeLogic.js"></script>
+{% endblock scripts %}
