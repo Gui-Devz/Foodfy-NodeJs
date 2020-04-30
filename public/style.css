@@ -264,7 +264,7 @@ footer div p {
     box-sizing: border-box;
 }
 
-.step section {
+.step .info-content {
     margin-bottom: 20px;
     margin-top: 39px;
 
@@ -275,7 +275,7 @@ footer div p {
     align-items: center;
 }
 
-.step section h2 {
+.step .info-content h2 {
     padding: 0;
     margin: 0;
 
@@ -283,7 +283,7 @@ footer div p {
     line-height: 28px;
 }
 
-.step section p {
+.step .info-content p {
     margin-left: 8px;
 
     font-size: 12px;
@@ -296,14 +296,23 @@ footer div p {
     color: #999999;
 }
 
-.step ul {
+.preparation.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.preparation ul {
     list-style-position: inside;
 }
 
-.step ul li,
-.step p {
+.preparation ul li,
+.preparation p {
     font-size: 18px;
     line-height: 28px;
 
     color: #444444;
+}
+
+.preparation {
+    visibility: visible;
 }
