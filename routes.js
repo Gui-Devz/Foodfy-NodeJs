@@ -1,28 +1,22 @@
 const express = require("express");
-const data = require("./assets/data");
+const data = require("./assets/data.json");
+const admin = require("./controllers/admin");
+const recipes = require("./controllers/recipes");
 
 const routes = express.Router();
 
-routes.get("/", (req, res) => {
-  return res.render("index", { recipes: data });
-});
+routes.get("/", recipes.index);
 
-routes.get("/about", (req, res) => {
-  return res.render("about");
-});
+routes.get("/about", recipes.about);
 
-routes.get("/recipes", (req, res) => {
-  return res.render("recipes", { recipes: data });
-});
+routes.get("/recipes", recipes.list);
 
-routes.get("/recipe", (req, res) => {
-  const id = req.query.id;
+routes.get("/recipes/:id", recipes.show);
 
-  const recipe = data.find((recipe) => {
-    return recipe.id == id;
-  });
+// ADMIN SESSION
 
-  return res.render("recipe", { recipe });
-});
+routes.get("/admin/recipes", admin.index);
+
+routes.get("/admin/recipes/:id", admin.show);
 
 module.exports = routes;

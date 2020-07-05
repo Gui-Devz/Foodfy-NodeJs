@@ -6,15 +6,16 @@ const server = express();
 
 server.use(express.static("public"));
 server.use(express.static("img"));
+server.use(express.static("scripts"));
 server.use(routes);
 
 server.set("view engine", "njk");
 
 nunjucks.configure("views", {
-    express: server,
-    noCache: true,
+  express: server,
+  noCache: true,
 });
 
 server.listen(5000, () => {
-    console.log("server is running");
+  console.log("server is running");
 });
