@@ -15,3 +15,7 @@ exports.show = (req, res) => {
 
   return res.render("admin/recipe", { recipe });
 };
+
+exports.edit = (req, res) => {
+  return res.render("admin/edit");
+};

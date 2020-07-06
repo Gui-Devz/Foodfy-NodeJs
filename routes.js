@@ -19,4 +19,6 @@ routes.get("/admin/recipes", admin.index);
 
 routes.get("/admin/recipes/:id", admin.show);
 
+routes.get("/admin/recipes/:id/edit", admin.edit);
+
 module.exports = routes;

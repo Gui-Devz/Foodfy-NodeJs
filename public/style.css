@@ -428,10 +428,11 @@ footer div p {
   font-weight: bold;
 }
 
-.head a {
+.head .button {
   width: 136px;
   height: 37px;
 
+  border: none;
   border-radius: 4px;
   box-shadow: 1px 2px 7px 1px rgba(7, 7, 7, 0.17);
 
@@ -449,6 +450,6 @@ footer div p {
   justify-content: center;
 }
 
-.head a:hover {
+.head .button:hover {
   background-color: blue;
 }
