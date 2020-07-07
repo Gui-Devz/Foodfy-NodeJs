@@ -465,7 +465,19 @@ header {
   font-weight: bold;
 }
 
-/* === FIELD of form ===*/
+/* === FORM AND ITS FIELDS ===*/
+
+.recipe .form {
+  width: 100%;
+  position: relative;
+}
+
+.form .delete {
+  position: absolute;
+
+  top: 0;
+  right: 165px;
+}
 
 .recipe {
   min-width: 940px;
@@ -477,16 +489,14 @@ header {
   width: 100%;
 }
 
-.head .buttons {
-  width: 250px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
+.head .button-wrapper {
+  width: fit-content;
+  position: absolute;
+  right: 0px;
+  top: 0;
 }
 
-.head .button:first-child {
+.form .button-delete {
   width: 92px;
   height: 37px;
 
@@ -508,15 +518,15 @@ header {
   line-height: 19px;
 }
 
-.head .button:first-child:hover {
+.form .button-delete:hover {
   background-color: #b40b0b;
 }
 
-.head .button:first-child:active {
+.form .button-delete:active {
   background-color: #dc4747;
 }
 
-.head .button:last-child {
+.head .button {
   width: 136px;
   height: 37px;
 
@@ -536,11 +546,11 @@ header {
   line-height: 19px;
 }
 
-.head .button:last-child:hover {
+.head .button:hover {
   background-color: #6056aa;
 }
 
-.head .button:last-child:active {
+.head .button:active {
   background-color: #6558c3;
 }
 

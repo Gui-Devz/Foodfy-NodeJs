@@ -36,7 +36,7 @@ exports.put = (req, res) => {
 
   for (const key of keys) {
     if (key == "") {
-      return res.send("Preencher todos os campos!");
+      return res.send("Fill all the fields!");
     }
   }
 };
