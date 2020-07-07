@@ -29,3 +29,14 @@ exports.edit = (req, res) => {
 
   return res.render("admin/edit", { recipe });
 };
+
+exports.put = (req, res) => {
+  const { id, image, ingredients, steps, information } = req.body;
+  const keys = Object.keys(req.body);
+
+  for (const key of keys) {
+    if (key == "") {
+      return res.send("Preencher todos os campos!");
+    }
+  }
+};

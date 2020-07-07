@@ -21,4 +21,8 @@ routes.get("/admin/recipes/:id", admin.show);
 
 routes.get("/admin/recipes/:id/edit", admin.edit);
 
+//ADMIN FORM
+
+routes.put("/admin/recipes", admin.put);
+
 module.exports = routes;
