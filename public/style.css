@@ -41,7 +41,7 @@ footer {
 
 footer {
   box-sizing: content-box;
-  width: 100%;
+  min-width: 940px;
 
   background-color: rgb(238, 238, 238);
 
@@ -236,7 +236,7 @@ footer div p {
 }
 
 .recipe img {
-  max-width: 940px;
+  max-width: 100%;
 
   border-radius: 20px;
 }
@@ -323,7 +323,7 @@ footer div p {
   width: 100%;
   min-height: 100%;
 
-  margin: 0 auto -40px auto;
+  margin: 0 auto -50px auto;
 }
 
 .all.admin .recipe {
@@ -420,6 +420,42 @@ footer div p {
   margin-bottom: 24px;
 }
 
+.recipe .button-edit {
+  width: 136px;
+  height: 37px;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 2px 7px 1px rgba(7, 7, 7, 0.17);
+  box-sizing: border-box;
+
+  text-decoration: none;
+  background-color: #6558c3;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+}
+
+.head .button-edit:hover {
+  background-color: #6056aa;
+}
+
+.head .button-edit:active {
+  background-color: #6558c3;
+}
+
+header {
+  min-width: 940px;
+}
+
 .head h1 {
   margin: 0;
   padding: 0;
@@ -428,13 +464,67 @@ footer div p {
   font-weight: bold;
 }
 
-.head .button {
-  width: 136px;
+/* === FIELD of form ===*/
+
+.recipe {
+  min-width: 940px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.recipe .fields {
+  width: 100%;
+}
+
+.head .buttons {
+  width: 250px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head .button:first-child {
+  width: 92px;
   height: 37px;
+
+  cursor: pointer;
 
   border: none;
   border-radius: 4px;
   box-shadow: 1px 2px 7px 1px rgba(7, 7, 7, 0.17);
+  box-sizing: border-box;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+  background-color: #dc4747;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+}
+
+.head .button:first-child:hover {
+  background-color: #b40b0b;
+}
+
+.head .button:first-child:active {
+  background-color: #dc4747;
+}
+
+.head .button:last-child {
+  width: 136px;
+  height: 37px;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 2px 7px 1px rgba(7, 7, 7, 0.17);
+  box-sizing: border-box;
 
   text-decoration: none;
   background-color: #6558c3;
@@ -443,13 +533,70 @@ footer div p {
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
 }
 
-.head .button:hover {
-  background-color: blue;
+.head .button:last-child:hover {
+  background-color: #6056aa;
+}
+
+.head .button:last-child:active {
+  background-color: #6558c3;
+}
+
+.fields .item {
+  margin-top: 30px;
+  max-width: 940px;
+}
+
+.fields .item div:first-child {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+.fields .item .ingredient,
+.item .step {
+  margin-bottom: 10px;
+}
+
+.fields .item input {
+  width: 100%;
+  height: 49px;
+
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.item button {
+  width: fit-content;
+  height: 25px;
+
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  text-align: left;
+
+  border: none;
+  background-color: white;
+  color: #6558c3;
+
+  cursor: pointer;
+}
+
+.item:last-child textarea {
+  min-width: 900px;
+  height: 257px;
+  box-sizing: border-box;
+
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  padding: 10px;
+
+  font-size: 16px;
+  line-height: 19px;
 }
