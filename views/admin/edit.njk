@@ -12,11 +12,12 @@
 
     <div class="form">
         <div class="delete">
-            <form action="" method="post">
+            <form method="POST" action="/admin/recipes?_method=DELETE">
+                <input type="hidden" name="id" value="{{recipe.id}}">
                 <button class="button-delete" type="submit"><span>Deletar</span></a>
             </form>
         </div>
-        <form  method="POST" action="/admin/recipes?_method=PUT">
+        <form method="POST" action="/admin/recipes?_method=PUT">
             <div class="head">
                 <div>
 
@@ -27,7 +28,7 @@
                 </div>
             </div>
             {%include "admin/fields.njk"%}
-            <input type="hidden" value="{{recipe.id}}">
+            <input type="hidden" name="id" value="{{recipe.id}}">
         </form>
     </div>
 </div>
