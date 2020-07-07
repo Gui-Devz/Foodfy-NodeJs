@@ -17,34 +17,7 @@
                 <button class="button" type="submit"><span>Salvar Receita</span></a>
             </div>
         </div>
-        <div class="fields">
-            <div class="item">
-                <div>Imagem da receita</div>
-                <div><input type="url" value="aa"></div>
-            </div>
-            <div class="item">
-                <div>Ingredientes</div>
-                <div class="ingredients">
-                    <div class="ingredient">
-                        <input type="text" value="aa">
-                    </div>
-                </div>
-                <button class="add-ingredient" type="button">Adicionar novo ingrediente</button>
-            </div>
-            <div class="item">
-                <div>Modo de preparo</div>
-                <div class="steps">
-                    <div class="step">
-                        <input type="text" value="aa">
-                    </div>
-                </div>
-                <button class="add-step" type="button">Adicionar novo passo</button>
-            </div>
-            <div class="item">
-                <div>Informações adicionais</div>
-                <div><textarea type="text"></textarea></div>
-            </div>
-        </div>
+        {%include "admin/fields.njk"%}
     </form>
 </div>
 

@@ -13,9 +13,19 @@ exports.show = (req, res) => {
     return recipe.id == id;
   });
 
+  if (!recipe) return res.send("Recipe not found!");
+
   return res.render("admin/recipe", { recipe });
 };
 
 exports.edit = (req, res) => {
-  return res.render("admin/edit");
+  const { id } = req.params;
+
+  const recipe = data.recipes.find((recipe) => {
+    return recipe.id == id;
+  });
+
+  if (!recipe) return res.send("Recipe not found!");
+
+  return res.render("admin/edit", { recipe });
 };
