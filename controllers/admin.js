@@ -1,8 +1,7 @@
 const data = require("../assets/data.json");
-const utils = "../assets/utils.js";
-const positiongID = utils.positiongID;
+const utils = require("../assets/utils.js");
+const positioningID = utils.positioningID;
 const fs = require("fs");
-const { render } = require("nunjucks");
 
 exports.index = (req, res) => {
   return res.render("admin/index", { recipes: data.recipes });
@@ -33,11 +32,19 @@ exports.edit = (req, res) => {
 };
 
 exports.create = (req, res) => {
-  return res.render();
+  return res.render("admin/create");
 };
 
+// FORM routes
 exports.post = (req, res) => {
-  const { id, image, ingredients, preparation, information } = req.body;
+  const {
+    image,
+    title,
+    author,
+    ingredients,
+    preparation,
+    information,
+  } = req.body;
   const keys = Object.keys(req.body);
 
   console.log(req.body);
@@ -47,10 +54,16 @@ exports.post = (req, res) => {
     }
   }
 
+  const id = positioningID(data.recipes);
+
   const newRecipe = {
-    ...recipe,
-    ...req.body,
-    id: positiongID(id),
+    id,
+    image,
+    title,
+    author,
+    ingredients,
+    preparation,
+    information,
   };
 
   data.recipes.push(newRecipe);

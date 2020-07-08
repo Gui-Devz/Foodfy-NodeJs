@@ -1,5 +1,4 @@
 const express = require("express");
-const data = require("./assets/data.json");
 const admin = require("./controllers/admin");
 const recipes = require("./controllers/recipes");
 
@@ -17,11 +16,11 @@ routes.get("/recipes/:id", recipes.show);
 
 routes.get("/admin/recipes", admin.index);
 
+routes.get("/admin/recipes/create", admin.create);
+
 routes.get("/admin/recipes/:id", admin.show);
 
 routes.get("/admin/recipes/:id/edit", admin.edit);
-
-routes.get("admin/recipes/create", admin.create);
 
 //ADMIN FORM
 
