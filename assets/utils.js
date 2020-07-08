@@ -29,29 +29,49 @@ module.exports = {
     };
   },
 
+  //Function guarantees that all numbers of IDs that was not used is now used
   positioningID: (array) => {
     if (array.length == 0 || (array.length == 1 && array[0].id != 1)) {
       return 1;
-    }
+    } else if (array.length >= 1) {
+      let positionsOfID = [];
 
-    let positionsOfID = [];
+      for (const identification of array) {
+        positionsOfID.push(identification.id);
+      }
 
-    for (const user of array) {
-      positionsOfID.push(user.id);
-    }
+      positionsOfID.sort((a, b) => {
+        return a - b;
+      });
 
-    positionsOfID.sort((a, b) => {
-      return a - b;
-    });
+      if (positionsOfID[0] != 1) return 1;
 
-    if (positionsOfID[0] != 1) return 1;
-
-    for (let i = 0; i < positionsOfID.length; i++) {
-      if (positionsOfID[i] - positionsOfID[i - 1] > 1) {
-        return positionsOfID[i] - 1;
-      } else if (i == positionsOfID.length - 1) {
-        return positionsOfID[i] + 1;
+      for (let i = 0; i < positionsOfID.length; i++) {
+        if (positionsOfID[i] - positionsOfID[i - 1] > 1) {
+          return positionsOfID[i] - 1;
+        } else if (i == positionsOfID.length - 1) {
+          return positionsOfID[i] + 1;
+        }
       }
     }
+  },
+
+  findingRecipe: (array, id) => {
+    const newArray = array.find((recipe) => {
+      return recipe.id == id;
+    });
+
+    return newArray;
+  },
+
+  //Function guarantees that will not be possible to save an array with an empty
+  //position, like ["","blabla"]
+  cleaningEmptyIndex: (array) => {
+    const newArray = array.filter((emptyIndex) => {
+      const trimString = emptyIndex.trim();
+
+      return trimString != "";
+    });
+    return newArray;
   },
 };

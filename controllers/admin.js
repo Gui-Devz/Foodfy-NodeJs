@@ -1,7 +1,7 @@
 const data = require("../assets/data.json");
 const utils = require("../assets/utils.js");
-const positioningID = utils.positioningID;
 const fs = require("fs");
+const { findingRecipe } = require("../assets/utils.js");
 
 exports.index = (req, res) => {
   return res.render("admin/index", { recipes: data.recipes });
@@ -10,9 +10,7 @@ exports.index = (req, res) => {
 exports.show = (req, res) => {
   const { id } = req.params;
 
-  const recipe = data.recipes.find((recipe) => {
-    return recipe.id == id;
-  });
+  const recipe = utils.findingRecipe(data.recipes, id);
 
   if (!recipe) return res.send("Recipe not found!");
 
@@ -22,9 +20,7 @@ exports.show = (req, res) => {
 exports.edit = (req, res) => {
   const { id } = req.params;
 
-  const recipe = data.recipes.find((recipe) => {
-    return recipe.id == id;
-  });
+  const recipe = findingRecipe(data.recipes, id);
 
   if (!recipe) return res.send("Recipe not found!");
 
@@ -54,7 +50,7 @@ exports.post = (req, res) => {
     }
   }
 
-  const id = positioningID(data.recipes);
+  const id = utils.positioningID(data.recipes);
 
   const newRecipe = {
     id,
@@ -96,10 +92,16 @@ exports.put = (req, res) => {
     }
   });
 
+  const newIngredients = utils.cleaningEmptyIndex(ingredients);
+
+  const newPreparation = utils.cleaningEmptyIndex(preparation);
+
   data.recipes[foundIndex] = {
     ...recipe,
     ...req.body,
     id: Number(id),
+    ingredients: newIngredients,
+    preparation: newPreparation,
   };
 
   fs.writeFile("./assets/data.json", JSON.stringify(data, null, 2), (err) => {
