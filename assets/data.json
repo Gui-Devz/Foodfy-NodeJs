@@ -140,17 +140,6 @@
       "information": "Preste bastante atenção na hora de configurar o seu forno, pois um só erro pode ser fatal"
     },
     {
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/pizza.png",
-      "ingredients": [
-        "aa"
-      ],
-      "preparation": [
-        "aa"
-      ],
-      "information": "sasasassfsfsdfvcxvcxvxczvcxzvsdfsdafsdafdasfdsfcvxvzxcvcxzvxcvxzc\r\nfdsfdsadsfdsfsadfdasfasdfasdfdsafsdafasd",
-      "id": 7
-    },
-    {
       "id": 8,
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/pizza.png",
       "title": "Pizzinha",
@@ -170,19 +159,6 @@
         "aaaaaa"
       ],
       "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    },
-    {
-      "id": 9,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/pizza.png",
-      "title": "ddd",
-      "author": "ddd",
-      "ingredients": [
-        "ddd"
-      ],
-      "preparation": [
-        "ddd"
-      ],
-      "information": "ddd"
     }
   ]
 }
