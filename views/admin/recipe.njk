@@ -45,11 +45,13 @@
         </section>
 
         <div class="preparation">
+            <ul>
             {% for preparation in recipe.preparation %}
 
-                <p>{{preparation}}</p>
+                <li>{{preparation}}</li>
 
             {% endfor %}
+            </ul>
         </div>
     </div>
 
