@@ -10,7 +10,9 @@ exports.index = (req, res) => {
 exports.show = (req, res) => {
   const { id } = req.params;
 
-  const recipe = utils.findingRecipe(data.recipes, id);
+  const searchRecipe = findingRecipe(data.recipes, id);
+
+  const recipe = searchRecipe.recipe;
 
   if (!recipe) return res.send("Recipe not found!");
 
@@ -20,7 +22,9 @@ exports.show = (req, res) => {
 exports.edit = (req, res) => {
   const { id } = req.params;
 
-  const recipe = findingRecipe(data.recipes, id);
+  const searchRecipe = findingRecipe(data.recipes, id);
+
+  const recipe = searchRecipe.recipe;
 
   if (!recipe) return res.send("Recipe not found!");
 
@@ -43,7 +47,6 @@ exports.post = (req, res) => {
   } = req.body;
   const keys = Object.keys(req.body);
 
-  console.log(req.body);
   for (const key of keys) {
     if (key == "") {
       return res.send("Fill all the fields!");
@@ -77,20 +80,16 @@ exports.put = (req, res) => {
   const { id, image, ingredients, preparation, information } = req.body;
   const keys = Object.keys(req.body);
 
-  console.log(req.body);
   for (const key of keys) {
     if (key == "") {
       return res.send("Fill all the fields!");
     }
   }
 
-  let foundIndex = 0;
-  const recipe = data.recipes.find((recipe, index) => {
-    if (recipe.id == id) {
-      foundIndex = index;
-      return true;
-    }
-  });
+  const searchRecipe = findingRecipe(data.recipes, id);
+
+  const foundIndex = searchRecipe.index;
+  const recipe = searchRecipe.recipe;
 
   const newIngredients = utils.cleaningEmptyIndex(ingredients);
 

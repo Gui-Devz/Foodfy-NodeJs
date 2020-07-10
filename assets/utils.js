@@ -56,12 +56,17 @@ module.exports = {
     }
   },
 
+  //Function that search the right recipe inside the JSON data file and its array index
   findingRecipe: (array, id) => {
-    const newArray = array.find((recipe) => {
-      return recipe.id == id;
+    let index = 0;
+    const recipe = array.find((recipe, foundIndex) => {
+      if (recipe.id == id) {
+        index = foundIndex;
+        return true;
+      }
     });
 
-    return newArray;
+    return { recipe, index };
   },
 
   //Function guarantees that will not be possible to save an array with an empty
