@@ -42,7 +42,7 @@ After installing NodeJS you can clone the repository, just use the following com
 
 This step can (or must) be done inside VScode ;)
 
-- Use the following command on your terminal: npm install nodemon -D
+- Use the following command on your terminal: npm install
 
 ## License
 
