@@ -28,28 +28,21 @@ Web page about food recipes
 
 [//]: # "Add the features of your project here:"
 
--   💹 **Node Js** — A JavaScript runtime
--   🔵 **Express** — A web framework for Node Js
--   💹 **Nunjucks** — A powerful template engine for Node Js
+- 💹 **Node Js** — A JavaScript runtime
+- 🔵 **Express** — A web framework for Node Js
+- 💹 **Nunjucks** — A powerful template engine for Node Js
 
 ## Getting started
 
 First of all you'll need to install the NodeJs in your machine, if you are a Windows user I'd recommend to install via Chocolatey (If you're user of other OS search for the best way to install Nodejs in your case)
 
--   Use the steps given by the official web site: https://chocolatey.org/install
+After installing NodeJS you can clone the repository, just use the following command inside your VScode terminal
 
-Then you'll need the framework Express for the server setup.
+- git clone https://github.com/Gui-Devz/Foodfy-NodeJs.git
 
--   Use the following command on your terminal (VScode): npm install express
+This step can (or must) be done inside VScode ;)
 
-Then I'd recommend to use nodemon as a devDependencies, just for practicality.
-
--   Use the following command on your terminal: npm install nodemon -D
-
-In this project it was used a template view engine, that in this case was Nunjucks.
-So...
-
--   Use the following command on your terminal: npm install nunjucks -y
+- Use the following command on your terminal: npm install nodemon -D
 
 ## License
 
